@@ -18,16 +18,24 @@ eventSource.onmessage = (event) => {
 
 // 파란박스 만들기
 function getSendMsgBox(data) {
+    let md = data.createAt.substring(5,10);
+    let tm = data.createAt.substring(11,16);
+    let convertTime = tm + " | " + md;
+
     return `<div class="sent_msg">
                 <p>${data.msg}</p>
-                <span class="time_date"> ${data.createAt} /  ${data.sender}</span>
+                <span class="time_date"> ${convertTime} /  ${data.sender}</span>
             </div>`;
 }
 // 회색박스 만들기
 function getReceiveMsgBox(data) {
+    let md = data.createAt.substring(5,10);
+    let tm = data.createAt.substring(11,16);
+    let convertTime = tm + " | " + md;
+
     return `<div class="received_withd_msg">
                 <p>${data.msg}</p>
-                <span class="time_date"> ${data.createAt} /  ${data.sender}</span>
+                <span class="time_date"> ${convertTime} /  ${data.sender}</span>
             </div>`;
 }
 
