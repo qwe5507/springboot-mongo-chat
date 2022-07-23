@@ -24,7 +24,7 @@ function getSendMsgBox(data) {
 
     return `<div class="sent_msg">
                 <p>${data.msg}</p>
-                <span class="time_date"> ${convertTime} /  ${data.sender}</span>
+                <span class="time_date"> ${convertTime} / <b>${data.sender}</b></span>
             </div>`;
 }
 // 회색박스 만들기
@@ -35,7 +35,7 @@ function getReceiveMsgBox(data) {
 
     return `<div class="received_withd_msg">
                 <p>${data.msg}</p>
-                <span class="time_date"> ${convertTime} /  ${data.sender}</span>
+                <span class="time_date"> ${convertTime} / <b>${data.sender}</b></span>
             </div>`;
 }
 
